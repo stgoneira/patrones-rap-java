@@ -1,11 +1,6 @@
 package cl.patrones.sysdonaciones.notificaciones;
 
-import org.springframework.stereotype.Service;
+public interface NotificacionService {
 
-@Service
-public class NotificacionService {
-
-	public void notificar(String transaccionId) {
-		System.out.println("Enviando email....");
-	}
+	public void notificar(String transaccionId);
 }

@@ -1,9 +1,5 @@
 package cl.patrones.sysdonaciones.web.forms;
 
-import java.io.File;
-
-import org.springframework.web.multipart.MultipartFile;
-
 public class MensualidadSocioForm extends DonacionFormBase {
 
 	String rut;	

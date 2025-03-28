@@ -64,12 +64,12 @@ public class AppWebController {
 	}
 	
 	@GetMapping("/donacion/socio")
-	public String formDonacionSocio(Model model) {
+	public String formMensualidadSocio(Model model) {
 		model.addAttribute("form", new MensualidadSocioForm());
 		return "/donacion/donacion-socio";
 	}
 	@PostMapping("/donacion/socio")
-	public String donacionSocio(
+	public String mensualidadSocio(
 		@RequestParam("comprobante") MultipartFile comprobante,
 		@ModelAttribute MensualidadSocioForm form,
 		Model model
@@ -90,12 +90,12 @@ public class AppWebController {
 	}
 	
 	@GetMapping({"/","/donacion/general"})
-	public String formDonacion(Model model) {
+	public String formDonacionGeneral(Model model) {
 		model.addAttribute("form", new DonacionGeneralForm());
 		return "/donacion/donacion";
 	}
 	@PostMapping({"/","/donacion/general"})
-	public String donacion(
+	public String donacionGeneral(
 		@RequestParam("comprobante") MultipartFile comprobante,
 		@ModelAttribute DonacionGeneralForm form,
 		Model model
